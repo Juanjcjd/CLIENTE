@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.whatsapp.ChatController"
+            style="-fx-background-color: #f0f0f0;">
+
+    <top>
+        <HBox alignment="CENTER_RIGHT" spacing="10" style="-fx-background-color: #2196F3; -fx-padding: 10;">
+            <TextField fx:id="messageField" promptText="Escribe tu mensaje..." />
+            <Button text="Enviar" onAction="#sendMessage" style="-fx-background-color: #4CAF50; -fx-text-fill: white;" />
+        </HBox>
+    </top>
+
+    <center>
+        <ScrollPane fitToWidth="true" fitToHeight="true">
+            <VBox fx:id="messagesContainer" spacing="5" style="-fx-padding: 10;">
+            </VBox>
+        </ScrollPane>
+    </center>
+
+</BorderPane>
